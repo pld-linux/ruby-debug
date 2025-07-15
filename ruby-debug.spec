@@ -51,7 +51,7 @@ Dokumentacji w formacie ri dla %{name}.
 find -newer README  -o -print | xargs touch --reference %{SOURCE0}
 mv cli/* lib
 cp %{_datadir}/setup.rb .
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 ruby setup.rb config \
